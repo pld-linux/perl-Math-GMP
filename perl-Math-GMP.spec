@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Math
-%define		pnam	GMP
+%define	pdir	Math
+%define	pnam	GMP
 Summary:	Math::GMP Perl module - high speed arbitrary size integer math
 Summary(pl):	Modu³ Perla Math::GMP - szybka arytmetyka liczb ca³kowitych o dowolnym rozmiarze
 Name:		perl-Math-GMP
