@@ -9,13 +9,13 @@ Summary:	Math::GMP Perl module - High speed arbitrary size integer math
 Summary(pl):	Modu³ Perla Math::GMP - szybka arytmetyka liczb ca³kowitych o dowolnym rozmiarze
 Name:		perl-Math-GMP
 Version:	2.03
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	gmp-devel
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,7 +30,8 @@ obliczeñ na du¿ych liczbach ca³kowitych.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
@@ -48,9 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes LICENSE README
-%{perl_sitearch}/Math/GMP.pm
-%dir %{perl_sitearch}/auto/Math/GMP
-%{perl_sitearch}/auto/Math/GMP/GMP.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Math/GMP/GMP.so
-%{perl_sitearch}/auto/Math/GMP/autosplit.ix
+%{perl_vendorarch}/Math/GMP.pm
+%dir %{perl_vendorarch}/auto/Math/GMP
+%{perl_vendorarch}/auto/Math/GMP/GMP.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Math/GMP/GMP.so
+%{perl_vendorarch}/auto/Math/GMP/autosplit.ix
 %{_mandir}/man3/*
