@@ -9,7 +9,7 @@ Summary:	Math::GMP Perl module - high speed arbitrary size integer math
 Summary(pl):	Modu³ Perla Math::GMP - szybka arytmetyka liczb ca³kowitych o dowolnym rozmiarze
 Name:		perl-Math-GMP
 Version:	2.03
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -29,6 +29,11 @@ obliczeñ na du¿ych liczbach ca³kowitych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+
+%ifarch alpha amd64 ia64 ppc64 sparc64
+# original reference values expect 32-bit long
+%{__perl} -pi -e 's/^\+9999999999(9*):[0-9]+$/+9999999999$1:9999999999$1/' t/gmppm.t
+%endif
 
 %build
 %{__perl} Makefile.PL \
