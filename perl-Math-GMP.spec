@@ -16,6 +16,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	291e5847986c7591cd70c1788c979a98
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	gmp-devel
+BuildRequires:	rpmbuild(macros) >= 1.213
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,7 +31,7 @@ obliczeñ na du¿ych liczbach ca³kowitych.
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
-%ifarch alpha amd64 ia64 ppc64 sparc64
+%ifarch %{x8664} alpha ia64 ppc64 s390x sparc64
 # original reference values expect 32-bit long
 %{__perl} -pi -e 's/^\+9999999999(9*):[0-9]+$/+9999999999$1:9999999999$1/' t/gmppm.t
 %endif
