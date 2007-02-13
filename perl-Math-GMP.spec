@@ -6,7 +6,7 @@
 %define		pdir	Math
 %define		pnam	GMP
 Summary:	Math::GMP Perl module - high speed arbitrary size integer math
-Summary(pl.UTF-8):   Moduł Perla Math::GMP - szybka arytmetyka liczb całkowitych o dowolnym rozmiarze
+Summary(pl.UTF-8):	Moduł Perla Math::GMP - szybka arytmetyka liczb całkowitych o dowolnym rozmiarze
 Name:		perl-Math-GMP
 Version:	2.04
 Release:	1
