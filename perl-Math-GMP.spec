@@ -10,14 +10,15 @@ Summary(pl.UTF-8):	Moduł Perla Math::GMP - szybka arytmetyka liczb całkowitych
 Name:		perl-Math-GMP
 Version:	2.04
 Release:	3
-License:	LGPL
+License:	LGPL v2+
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Math/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	291e5847986c7591cd70c1788c979a98
-BuildRequires:	perl-devel >= 1:5.8.0
+URL:		http://search.cpan.org/dist/Math-GMP/
 BuildRequires:	gmp-devel
-BuildRequires:	rpmbuild(macros) >= 1.213
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.213
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
