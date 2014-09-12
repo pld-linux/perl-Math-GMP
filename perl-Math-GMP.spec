@@ -60,7 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes LICENSE README
 %{perl_vendorarch}/Math/GMP.pm
 %dir %{perl_vendorarch}/auto/Math/GMP
-%{perl_vendorarch}/auto/Math/GMP/GMP.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Math/GMP/GMP.so
 %{perl_vendorarch}/auto/Math/GMP/autosplit.ix
 %{_mandir}/man3/*
