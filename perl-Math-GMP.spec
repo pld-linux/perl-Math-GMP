@@ -8,15 +8,16 @@
 Summary:	Math::GMP Perl module - high speed arbitrary size integer math
 Summary(pl.UTF-8):	Moduł Perla Math::GMP - szybka arytmetyka liczb całkowitych o dowolnym rozmiarze
 Name:		perl-Math-GMP
-Version:	2.06
-Release:	13
+Version:	2.17
+Release:	1
 License:	LGPL v2+
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Math/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	0ead0cd7d7ec1076c6d5a5fbe81b91a3
+# Source0-md5:	f06e26dbf1a4836b55c47252ae66e33d
 URL:		http://search.cpan.org/dist/Math-GMP/
 BuildRequires:	gmp-devel
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	perl-Devel-CheckLib
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.213
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
